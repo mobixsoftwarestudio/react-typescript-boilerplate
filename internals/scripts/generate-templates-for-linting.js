@@ -236,7 +236,6 @@ async function generateComponent({ name, memo }) {
     .runActions({
       name: componentName,
       memo,
-      wantMessages: true,
       wantLoadable: true,
     })
     .then(handleResult)
@@ -263,7 +262,6 @@ async function generateContainer({ name, memo }) {
       wantHeaders: true,
       wantActionsAndReducer: true,
       wantSagas: true,
-      wantMessages: true,
       wantLoadable: true,
     })
     .then(handleResult)

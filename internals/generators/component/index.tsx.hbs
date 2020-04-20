@@ -13,20 +13,12 @@ import React from 'react';
 
 // import styled from 'styles/styled-components';
 
-{{#if wantMessages}}
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
-{{/if}}
-
 interface Props {}
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 function {{ properCase name }}(props: Props) {
   return (
   <div>
-    {{#if wantMessages}}
-    <FormattedMessage {...messages.header} />
-    {{/if}}
   </div>
   );
 };
