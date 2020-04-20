@@ -2,8 +2,7 @@
  *
  * Routes.tsx
  *
- * This component is the skeleton around the actual pages, and should only
- * contain code that should be seen on all pages. (e.g. navigation bar)
+ * This component is the container of all Routes. Place new routes on Routes.ts file.
  *
  */
 
@@ -18,7 +17,7 @@ function Routes() {
   return (
     <Switch>
       {RoutesList.map(({ exact, path, component }) => (
-        <Route exact={exact} path={path} component={component} />
+        <Route exact={exact} path={path} component={component} key={path} />
       ))}
       <Route exact path="/404" component={NotFoundPage} />
       <Redirect to="/404" />

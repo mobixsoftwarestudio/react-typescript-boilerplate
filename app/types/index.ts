@@ -3,6 +3,7 @@ import { RouterState } from 'connected-react-router';
 import { Saga } from 'redux-saga';
 import { SagaInjectionModes } from 'redux-injectors';
 
+import { ContainerState as HomePageState } from 'containers/HomePage/types';
 // [IMPORT NEW CONTAINERSTATE ABOVE] < Needed for generating containers seamlessly
 
 export interface InjectedStore extends Store {
@@ -25,6 +26,7 @@ export interface InjectSagaParams {
 // Your root reducer type, which is your redux state types also
 export interface ApplicationRootState {
   readonly router: RouterState;
+  readonly homePage: HomePageState;
   // [INSERT NEW REDUCER KEY ABOVE] < Needed for generating containers seamlessly
 
   // for testing purposes

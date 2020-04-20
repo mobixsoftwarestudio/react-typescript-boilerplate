@@ -13,12 +13,6 @@ if (!shell.test('-e', 'internals/templates')) {
 
 process.stdout.write('Cleanup started...');
 
-// Reuse existing LanguageProvider
-shell.mv(
-  'app/containers/LanguageProvider/tests',
-  'internals/templates/containers/LanguageProvider',
-);
-
 // Cleanup components/
 shell.rm('-rf', 'app/components/*');
 
@@ -29,10 +23,6 @@ shell.mv('internals/templates/containers', 'app');
 // Handle tests/
 shell.mv('internals/templates/tests', 'app');
 
-// Handle translations/
-shell.rm('-rf', 'app/translations');
-shell.mv('internals/templates/translations', 'app');
-
 // Handle utils/
 shell.rm('-rf', 'app/utils');
 shell.mv('internals/templates/utils', 'app');
@@ -40,8 +30,6 @@ shell.mv('internals/templates/utils', 'app');
 // Replace the files in the root app/ folder
 shell.cp('internals/templates/app.tsx', 'app/app.tsx');
 shell.cp('internals/templates/global-styles.ts', 'app/global-styles.ts');
-shell.cp('internals/templates/i18n.ts', 'app/i18n.ts');
-shell.cp('internals/templates/locales.ts', 'app/locales.ts');
 shell.cp('internals/templates/index.html', 'app/index.html');
 shell.cp('internals/templates/reducers.ts', 'app/reducers.ts');
 shell.cp('internals/templates/configureStore.ts', 'app/configureStore.ts');

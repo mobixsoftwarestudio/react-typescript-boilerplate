@@ -27,6 +27,8 @@ import 'file-loader?name=.htaccess!./.htaccess';
 
 import { HelmetProvider } from 'react-helmet-async';
 
+import { StylesProvider } from '@material-ui/core/styles';
+
 import configureStore from './configureStore';
 
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
@@ -46,9 +48,11 @@ const MOUNT_NODE = document.getElementById('app') as HTMLElement;
 const ConnectedApp = () => (
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <HelmetProvider>
-        <App />
-      </HelmetProvider>
+      <StylesProvider injectFirst>
+        <HelmetProvider>
+          <App />
+        </HelmetProvider>
+      </StylesProvider>
     </ConnectedRouter>
   </Provider>
 );
