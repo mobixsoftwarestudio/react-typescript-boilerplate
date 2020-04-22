@@ -4,7 +4,7 @@ import { triggerDummyLoading } from './actions';
 
 export function* triggerDummyLoadingSaga() {
   yield put(triggerDummyLoading(true));
-  yield delay(500);
+  yield delay(5000);
   yield put(triggerDummyLoading(false));
 }
 

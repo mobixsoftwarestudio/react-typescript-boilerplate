@@ -47,12 +47,12 @@ export default function HomePage() {
       <LoadingOverlay show={loading} />
       <Grid container spacing={2}>
         <Grid item xs={12}>
-          <h1>This is the HomePage container!</h1>
+          <h1>Projeto MonitorAR</h1>
         </Grid>
         <Grid item xs={12}>
           <LoadingButton variant="outlined" onClick={handleDummyLoader}>
             <span>
-              Click here to dispatch <b>dummyRequest</b> action!
+              Clique aqui para disparar uma <b>dummyRequest</b> ação!
             </span>
           </LoadingButton>
         </Grid>
