@@ -39,7 +39,9 @@
     "test": "cross-env NODE_ENV=test jest --coverage",
     "test:watch": "cross-env NODE_ENV=test jest --watchAll",
     "coveralls": "cat ./coverage/lcov.info | coveralls",
-    "prettify": "prettier --write"
+    "prettify": "prettier --write",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -96,6 +98,10 @@
     "@babel/plugin-transform-react-inline-elements": "7.9.0",
     "@babel/preset-env": "7.9.0",
     "@babel/preset-react": "7.9.1",
+    "@storybook/addon-actions": "6.0.12",
+    "@storybook/addon-essentials": "6.0.12",
+    "@storybook/addon-links": "6.0.12",
+    "@storybook/react": "6.0.12",
     "@testing-library/jest-dom": "5.1.1",
     "@testing-library/react": "10.0.1",
     "@types/fontfaceobserver": "0.0.6",
@@ -162,6 +168,7 @@
     "null-loader": "3.0.0",
     "plop": "2.6.0",
     "prettier": "2.0.1",
+    "react-is": "16.13.1",
     "react-test-renderer": "16.13.0",
     "redux-devtools-extension": "2.13.8",
     "rimraf": "3.0.2",
