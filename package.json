@@ -41,7 +41,9 @@
     "coveralls": "cat ./coverage/lcov.info | coveralls",
     "prettify": "prettier --write",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": [
@@ -68,14 +70,14 @@
     "connected-react-router": "6.8.0",
     "fontfaceobserver": "2.1.0",
     "history": "4.10.1",
-    "hoist-non-react-statics": "3.3.0",
+    "hoist-non-react-statics": "3.3.2",
     "immutability-helper": "3.0.2",
-    "lodash": "4.17.15",
+    "lodash": "4.17.19",
     "offline-plugin": "5.0.7",
-    "react": "16.13.0",
+    "react": "16.13.1",
     "react-app-polyfill": "1.0.6",
-    "react-dom": "16.13.0",
-    "react-helmet-async": "1.0.4",
+    "react-helmet-async": "1.0.5",
+    "react-dom": "16.13.1",
     "react-hot-loader": "4.12.20",
     "react-redux": "7.2.0",
     "react-router-dom": "5.1.2",
@@ -85,8 +87,9 @@
     "redux-saga": "1.1.3",
     "reselect": "4.0.0",
     "sanitize.css": "11.0.0",
-    "styled-components": "4.3.2",
-    "typesafe-actions": "5.1.0"
+    "styled-components": "4.4.1",
+    "typesafe-actions": "5.1.0",
+    "snyk": "^1.316.1"
   },
   "devDependencies": {
     "@babel/cli": "7.8.4",
@@ -191,5 +194,6 @@
     "webpack-hot-middleware": "2.25.0",
     "webpack-pwa-manifest": "4.2.0",
     "whatwg-fetch": "3.0.0"
-  }
+  },
+  "snyk": true
 }
